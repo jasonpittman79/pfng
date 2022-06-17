@@ -1,0 +1,217 @@
+<!-- Toolbar -->
+<mat-toolbar class="navbar--container">
+  <button mat-icon-button class="navbar--toggler" aria-label="Menu icon" *ngIf="displayIsSmall()" [matMenuTriggerFor]="clickMenu"
+  #clickMenuTrigger="matMenuTrigger">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <ul class="navbar--list" *ngIf="!displayIsSmall()">
+    <li class="navbar--list-item" *ngFor="let item of menuItems | keyvalue: asIsOrder; let i = index">
+      <a [routerLink]="['./']" fragment="{{ item.key }}"><span><mat-icon>{{ item.value }}</mat-icon></span>{{ item.key }}</a>
+    </li>
+  </ul>
+  <span class="navbar--spacer"></span>
+  <div class="navbar--brand-container text-end">
+    <span class="d-block navbar--my-name">Jason Pittman</span>
+    <span class="d-block navbar--my-title">Full Stack Developer</span>
+  </div>
+</mat-toolbar>
+
+<mat-menu #clickMenu="matMenu">
+  <button class="navbar--menu-item" mat-menu-item *ngFor="let item of menuItems | keyvalue: asIsOrder; let i = index">
+    <a [routerLink]="['./']" fragment="{{ item.key }}"><span><mat-icon>{{ item.value }}</mat-icon></span>{{ item.key }}</a>
+  </button>
+</mat-menu>
+
+<div class="content" role="main">
+
+  <!-- GitHub link -->
+  <h4 class="github-link">The repository containing the code for this portfolio can be found at <a href="https://github.com/jasonpittman79/pfng"><fa-icon [icon]="faGithub"></fa-icon>GitHub</a>.</h4>
+
+  <!-- Resume -->
+  <div id="Resume" class="card-container">
+    <div class="card resume">
+      <span>Resume</span>
+    </div>
+    <div class="card subcard">
+      <mat-card class="card--item">
+        <mat-card-title><span class="card--item-employer">Integris Group, LLC</span>
+          <span class="card--item-date">2021-11 &#8212; 2022-05</span>
+          <span class="card--item-title">Senior Full Stack Engineer</span>
+        </mat-card-title>
+        <mat-card-content>
+          <p>Developed full stack proof of concept for risk management application utilizing Microsoft Azure, Azure Data Studio, T-SQL, Python Flask API, Angular, and SCSS based on requirements gathering and consultation with the client and product management.</p>
+          <p>Aided with mobile development of a health and performance application using the Ionic Framework built on Angular and performed testing with emulators and mobile devices.</p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="card--item">
+        <mat-card-title><span class="card--item-employer">Rural Sourcing, Inc.</span>
+          <span class="card--item-date">2021-06 &#8212; 2021-10</span>
+          <span class="card--item-title">Senior Front End Engineer</span>
+        </mat-card-title>
+        <mat-card-content>
+          <p>Collaborated with client UI/UX lead to modernize enterprise cloud migration software UI using React, Redux, JavaScript, jQuery, SASS, and PHP hosted on AWS EC2 instance.</p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="card--item">
+        <mat-card-title><span class="card--item-employer">Overlayer (Nights and Weekends)</span>
+          <span class="card--item-date">2019-10 &#8212; 2021-06</span>
+          <span class="card--item-title">Full Stack Engineer</span>
+        </mat-card-title>
+        <mat-card-content>
+          <p>Extended image technology from A Birthday Place to target vendors, enabling the ability to customize T-shirts, coffee mugs, jewelry, etc. in the custom-made product space.</p>
+          <p>Designed feature-rich, responsive UI with Angular Material to allow users to manipulate images by providing image templates, color grids, text placement, font options, and texture shading.</p>
+          <p>Wrote RESTful Python API to support processes such as image storage, retrieval, and manipulation in an efficient and fault-tolerant manner.</p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="card--item">
+        <mat-card-title><span class="card--item-employer">A Birthday Place</span>
+          <span class="card--item-date">2017-11 &#8212; 2021-06</span>
+          <span class="card--item-title">Full Stack Engineer</span>
+        </mat-card-title>
+        <mat-card-content>
+          <p>Developed web application (Angular/Python) to manipulate professional product images to draw customer attention to storefronts, improving retail presence and supporting $1M revenue.</p>
+          <p>Designed and created automated systems in Python to support the management of over 12,000 individual products, expanding company catalog by more than ten times the previous amount.</p>
+          <p>Led Shopify home storefront development, which increased yearly gross revenue by 150%.</p>
+          <p>Leveraged PostgreSQL and Redis task queue to manage performant back-end processes.</p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="card--item">
+        <mat-card-title><span class="card--item-employer">Blueridge IT Solutions, Inc.</span>
+          <span class="card--item-date">2016-07 &#8212; 2017-01</span>
+          <span class="card--item-title">Web Developer</span>
+        </mat-card-title>
+        <mat-card-content>
+          <p>Implemented Learning Management System (LMS) for U.S. Department of Veterans Affairs with JavaScript frameworks and Bootstrap CSS, assisting veterans with healthy sleep practices.</p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="card--item">
+        <mat-card-title><span class="card--item-employer">ResQue, LLC</span>
+          <span class="card--item-date">2015-12 &#8212; 2016-04</span>
+          <span class="card--item-title">Web Developer</span>
+        </mat-card-title>
+        <mat-card-content>
+          <p>Used JavaScript, Node.js, Meteor.js, jQuery, MongoDB, and Bootstrap CSS to create responsive application that enabled real estate agents to dramatically improve social media engagement.</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <!-- Blog -->
+  <div id="Blog" class="card-container">
+    <div class="card blog">
+      <span>Blog</span>
+    </div>
+    <div class="card subcard">
+      <h4>Coming Soon</h4>
+    </div>
+  </div>
+
+  <!-- Profiles -->
+  <div id="Profiles" class="card-container">
+    <div class="card profiles">
+      <span>Profiles</span>
+    </div>
+    <div class="card subcard">
+      <mat-card class="card--item">
+        <mat-card-title><span class="card--item-employer">Profiles and Repositories</span>
+        </mat-card-title>
+
+        <mat-card-content>
+          <p><a href="https://www.linkedin.com/in/jason-pittman-72583413/"><fa-icon [icon]="faLinkedin"></fa-icon>LinkedIn</a></p>
+          <p><a href="https://github.com/jasonpittman79/"><fa-icon [icon]="faGithub"></fa-icon>GitHub</a></p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <!-- Code -->
+  <div id="Code" class="card-container">
+    <div class="card code">
+      <span>Code</span>
+    </div>
+    <div class="card subcard code--photo-container">
+      <p>The following screenshot demonstrates the Angular front end I developed for a RESTful Python image manipulation back end web API that generates product images.</p>
+      <a href="../assets/images/cakeify1.jpg"><img class="code--photo" src="../assets/images/cakeify1.jpg"/></a>
+      <p>A primary component of the above feature-rich Angular application for ABP/Overlayer can be found at <a href="https://github.com/jasonpittman79/code-samples/blob/main/cakeify-component.ts"><fa-icon [icon]="faGithub"></fa-icon>GitHub</a>.</p>
+      <p>Solutions for Project Euler problems (in Python and in JavaScript) can be found at <a href="https://github.com/jasonpittman79/project-euler-solutions"><fa-icon [icon]="faGithub"></fa-icon>GitHub</a>.</p>
+      <p>An example of using Selenium in Python for web automation can be found at <a href="https://github.com/jasonpittman79/code-samples/blob/main/selenium-web-download.py"><fa-icon [icon]="faGithub"></fa-icon>GitHub</a>.</p>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <div id="Education" class="card-container">
+    <div class="card education">
+      <span>Education</span>
+    </div>
+    <div class="card subcard">
+      <mat-card class="card--item">
+        <mat-card-title><span class="card--item-employer">Troy University</span>
+        </mat-card-title>
+        <mat-card-content>
+          <span class="card--item-employer">Graduated December 2016</span>
+          <span class="card--item-employer">Applied Computer Science</span>
+        </mat-card-content>
+        <mat-card-content>
+          <p>Summa Cum Laude</p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="card--item">
+        <mat-card-title><span class="card--item-employer">Other Awards</span>
+        </mat-card-title>
+        <mat-card-content>
+          <p>National Merit Finalist</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+
+  <!-- Skills -->
+  <div id="Skills" class="card-container">
+    <div class="card skills">
+      <span>Skills</span>
+    </div>
+    <div class="card subcard" *ngIf="!displayIsSmall()">
+      <h4>Example of Chart.js in Angular</h4>
+      <canvas class="chart" baseChart
+        [data]="barChartData"
+        [options]="barChartOptions"
+        [type]="barChartType">
+      </canvas>
+    </div>
+    <div class="card subcard" *ngIf="displayIsSmall()">
+      <span>Years of Experience</span>
+      <span style="font-weight: 400;">Responsive View</span>
+      <div id="skills--card">
+        <li class="skills--list-item" *ngFor="let item of skills | keyvalue: asIsOrder; let i = index">
+            <span class="skills--list-span">{{ item.key }} &rsaquo;&rsaquo; {{ item.value }}</span>
+        </li>
+      </div>
+    </div>
+  </div>
+
+  <!-- Experience -->
+  <div id="Experience" class="card-container">
+    <div class="card experience">
+      <span>Experience</span>
+    </div>
+    <div class="card subcard">
+      <h4>Coming Soon</h4>
+    </div>
+  </div>
+
+  <!-- About -->
+  <div id="About" class="card-container">
+    <div class="card about">
+      <span>About</span>
+    </div>
+    <div class="card subcard">
+      <div class="about--photo-container" [ngClass]="displayIsSmall() ? 'about--photo-container-sm' : ''">
+        <img class="about--photo" src="../assets/images/jp.jpg"/>
+        <p class="about--blurb">Jason has over five years' experience developing full stack web applications, utilizing back-end REST APIs and creating user-friendly, responsive user interfaces. He is always looking to learn new technologies and take on new challenges, including his most recent interest in mobile app development. In his spare time, he enjoys composing music, playing guitar, hiking, and spending time with his pets.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit, ChangeDetectorRef, ViewChild, OnDestroy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ChangeDetectorRef, HostListener, OnInit, ChangeDetectorRef, ViewChild, OnDestroy } from '@angular/core';
 import {
   BreakpointObserver,
   Breakpoints,
@@ -15,17 +15,24 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { Chart } from 'chart.js';
 import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
+import { PortfolioDataService } from './services/portfolio-data.service';
+import { PortfolioData } from '../models';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class AppComponent {
 
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
+  portfolioData: Observable<PortfolioData[]> = this.portfolioDataService.portfolioData;
+  single: any[];
+  multi: any[];
+  
   title = 'Portfolio';
   menuItems = {
     'Resume':'description',
@@ -137,7 +144,15 @@ export class AppComponent {
 
   constructor(
     breakpointObserver: BreakpointObserver,
-    public viewportScroller: ViewportScroller) {
+    public viewportScroller: ViewportScroller,
+    private portfolioDataService: PortfolioDataService,
+    private changeDetectorRef: ChangeDetectorRef) {
+
+    this.portfolioData.subscribe((resp)=> {
+      this.single = resp;
+      this.changeDetectorRef.detectChanges();
+    });
+
     breakpointObserver.observe([
       Breakpoints.XSmall,
       Breakpoints.Small,

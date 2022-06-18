@@ -1,11 +1,14 @@
 import json
 
+f = open('portfolio.json')
+data = json.load(f)
+f.close()
+
 def get(event, context):
 
   return {
     "statusCode": 200,
-    "body": json.dumps({"a": "0",
-                        "b": "1"}),
+    "body": json.dumps(data),
     "headers": {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",

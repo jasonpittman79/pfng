@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, ChangeDetectorRef, HostListener, OnInit, ChangeDetectorRef, ViewChild, OnDestroy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, HostListener, OnInit, ChangeDetectorRef, ViewChild, OnDestroy } from '@angular/core';
 import {
   BreakpointObserver,
   Breakpoints,
@@ -6,7 +6,7 @@ import {
 } from '@angular/cdk/layout';
 import { ViewportScroller } from '@angular/common';
 import { Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { map, tap, catchError } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { MatCardModule } from '@angular/material/card';
@@ -16,7 +16,8 @@ import { Chart } from 'chart.js';
 import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 import { PortfolioDataService } from './services/portfolio-data.service';
-import { PortfolioData } from '../models';
+import { PortfolioData } from './models/portfolio-data.model';
+import { from, of, pipe } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -29,10 +30,8 @@ export class AppComponent {
 
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
-  portfolioData: Observable<PortfolioData[]> = this.portfolioDataService.portfolioData;
-  single: any[];
-  multi: any[];
-  
+  public portfolioData: PortfolioData[] = [];
+
   title = 'Portfolio';
   menuItems = {
     'Resume':'description',
@@ -148,11 +147,6 @@ export class AppComponent {
     private portfolioDataService: PortfolioDataService,
     private changeDetectorRef: ChangeDetectorRef) {
 
-    this.portfolioData.subscribe((resp)=> {
-      this.single = resp;
-      this.changeDetectorRef.detectChanges();
-    });
-
     breakpointObserver.observe([
       Breakpoints.XSmall,
       Breakpoints.Small,
@@ -166,8 +160,6 @@ export class AppComponent {
           }
         }
     });
-
-    console.log(this.skillData);
   }
 
   displayNameMap = new Map([
@@ -199,9 +191,27 @@ export class AppComponent {
     this.destroyed.complete();
   }
 
+  retrieveData() {
+    this.portfolioDataService.getData$()
+      .subscribe(data => {
+        console.log(data);
+        this.parseData(data);
+      });
+  }
+
+  parseData(data: any) {
+    for (const key in data) {
+      const item = new PortfolioData(key, data[key]);
+      this.portfolioData.push(item);
+      console.log(item);
+    }
+  }
+
   ngOnInit() {
     this.getScreenWidth = window.innerWidth;
     this.getScreenHeight = window.innerHeight;
+
+    this.retrieveData();
   }
 
   @HostListener('window:resize', ['$event'])

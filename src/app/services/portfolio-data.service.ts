@@ -3,35 +3,21 @@ import { Injectable, Input } from '@angular/core';
 import { PortfolioData } from '../models/portfolio-data.model';
 import { throwError, Subject } from 'rxjs';
 import { catchError } from 'rxjs/operators'
-import { Response, RequestOptions, Headers} from '@angular/http';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/do';
+import { HttpErrorResponse } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
+
 export class PortfolioDataService {
 
   private API_URL = "https://api.jasonpittman.link";
 
-  public portfolioData: Subject<PortfolioData[]> = new Subject();
-
-  public selectedSubject: Subject<string> = new Subject();
-
   constructor(private http: HttpClient) { }
 
-  getPortfolioData(): void {
-
-    this.http.get<any>(this.API_URL, {})
-      .pipe(
-        catchError((e) => this.handleError(e))
-      ).subscribe((response)=> {
-        this.portfolioData.next(response as (PortfolioData[]));
-      });
+  getData$(): Observable<any> {
+    const url = this.API_URL;
+    return this.http.get(url);
   }
-
-  private handleError(error: HttpErrorResponse) {
-    console.log('error: ', error);
-
-    return throwError(
-      'Internal Error.');
-  };
 }

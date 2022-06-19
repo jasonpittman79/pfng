@@ -15,7 +15,6 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { Chart, registerables } from 'chart.js';
 import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
 import { PortfolioDataService } from './services/portfolio-data.service';
-import { PortfolioData } from './models/portfolio-data.model';
 import { from, of, pipe } from 'rxjs';
 
 @Component({

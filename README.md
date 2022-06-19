@@ -1,5 +1,5 @@
-# pfng
-My Portfolio in Angular 14
+# My Full-Stack Portfolio in Angular 14 and AWS serverless Python API
+The front end consumes a serverless AWS Python API written in Python to populate resume and skills data.
 
 Build hosted at https://www.jasonpittman.dev/
 
@@ -16,7 +16,5 @@ The portfolio features the following:
 - Material UI
 - Chart.js
 - Responsive Design
-
-# In the works
-- Angular 14 front end hosted on AWS CloudFront / S3
-- Accessing API over AWS Lambdas to retrieve JSON data to populate portfolio information
+- AWS serverless
+- Python API

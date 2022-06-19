@@ -46,4 +46,6 @@ Thumbs.db
 
 # Local Netlify folder
 .netlify
-.angular/*
+.angular/
+backend/.serverless/
+backend/node_modules/

@@ -27,6 +27,7 @@
 
   <!-- GitHub link -->
   <h4 class="github-link">The repository containing the code for this portfolio can be found at <a href="https://github.com/jasonpittman79/pfng"><fa-icon [icon]="faGithub"></fa-icon>GitHub</a>.</h4>
+  <h5 class="github-link">The front end consumes a serverless AWS API written in Python to populate resume and skills data.</h5>
 
   <!-- Resume -->
   <div id="Resume" class="card-container">
@@ -171,23 +172,24 @@
     <div class="card skills">
       <span>Skills</span>
     </div>
-    <div class="card subcard" *ngIf="!displayIsSmall()">
+    <!-- <div class="card subcard" *ngIf="!displayIsSmall()"> -->
+    <div class="card subcard">
       <h4>Example of Chart.js in Angular</h4>
-      <canvas class="chart" baseChart
-        [data]="barChartData"
-        [options]="barChartOptions"
-        [type]="barChartType">
-      </canvas>
+      <h5>The chart data is being pulled from an AWS serverless backend in Python</h5>
+      <canvas id="canvas" class="chart">{{ chart }}</canvas>
     </div>
-    <div class="card subcard" *ngIf="displayIsSmall()">
+
+    <!-- <div class="card subcard" *ngIf="displayIsSmall()">
       <span>Years of Experience</span>
       <span style="font-weight: 400;">Responsive View</span>
+      <h5>The chart data is being pulled from an AWS serverless backend in Python</h5>
+      <canvas id="canvas" class="chart" >{{ chart }}</canvas>
       <div id="skills--card">
         <li class="skills--list-item" *ngFor="let item of skills | keyvalue: asIsOrder; let i = index">
             <span class="skills--list-span">{{ item.key }} &rsaquo;&rsaquo; {{ item.value }}</span>
         </li>
       </div>
-    </div>
+    </div> -->
   </div>
 
   <!-- Experience -->

@@ -29,7 +29,7 @@
   <h4 class="github-link">The repository containing the code for this portfolio can be found at <a href="https://github.com/jasonpittman79/pfng"><fa-icon [icon]="faGithub"></fa-icon>GitHub</a>.</h4>
 
   <!-- Backend Testing -->
-  <p *ngFor="let item of portfolioData">hi</p>
+  <!-- <p *ngFor="let item of portfolioData">hi</p> -->
   <!-- <p>{{ portfolioData }}</p> -->
 
   <!-- Resume -->
@@ -177,11 +177,8 @@
     </div>
     <div class="card subcard" *ngIf="!displayIsSmall()">
       <h4>Example of Chart.js in Angular</h4>
-      <canvas class="chart" baseChart
-        [data]="barChartData"
-        [options]="barChartOptions"
-        [type]="barChartType">
-      </canvas>
+      <h5>The chart data is being pulled from an AWS serverless backend in Python</h5>
+      <canvas id="canvas" class="chart">{{ chart }}</canvas>
     </div>
     <div class="card subcard" *ngIf="displayIsSmall()">
       <span>Years of Experience</span>

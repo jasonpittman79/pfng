@@ -2,7 +2,7 @@
   "resume": {
     "0": {
       "employer": "Integris Group, LLC",
-      "dates": "2021-11 &#8212; 2022-05",
+      "dates": "2021-11 - 2022-05",
       "title": "Senior Full Stack Engineer",
       "highlights": {
         "0": "Developed full stack proof of concept for risk management application utilizing Microsoft Azure, Azure Data Studio, T-SQL, Python Flask API, Angular, and SCSS based on requirements gathering and consultation with the client and product management.",
@@ -11,7 +11,7 @@
     },
     "1": {
       "employer": "Rural Sourcing, Inc.",
-      "dates": "2021-06 &#8212; 2021-10",
+      "dates": "2021-06 - 2021-10",
       "title": "Senior Front End Engineer",
       "highlights": {
         "0": "Collaborated with client UI/UX lead to modernize enterprise cloud migration software UI using React, Redux, JavaScript, jQuery, SASS, and PHP hosted on AWS EC2 instance."
@@ -19,7 +19,7 @@
     },
     "2": {
       "employer": "Overlayer (Nights and Weekends)",
-      "dates": "2019-10 &#8212; 2021-06",
+      "dates": "2019-10 - 2021-06",
       "title": "Full Stack Engineer",
       "highlights": {
         "0": "Extended image technology from A Birthday Place to target vendors, enabling the ability to customize T-shirts, coffee mugs, jewelry, etc. in the custom-made product space.",
@@ -29,7 +29,7 @@
     },
     "3": {
       "employer": "A Birthday Place",
-      "dates": "2017-11 &#8212; 2021-06",
+      "dates": "2017-11 - 2021-06",
       "title": "Full Stack Engineer",
       "highlights": {
         "0": "Developed web application (Angular/Python) to manipulate professional product images to draw customer attention to storefronts, improving retail presence and supporting $1M revenue.",
@@ -40,7 +40,7 @@
     },
     "4": {
       "employer": "Blueridge IT Solutions, Inc.",
-      "dates": "2016-07 &#8212; 2017-01",
+      "dates": "2016-07 - 2017-01",
       "title": "Web Developer",
       "highlights": {
         "0": "Implemented Learning Management System (LMS) for U.S. Department of Veterans Affairs with JavaScript frameworks and Bootstrap CSS, assisting veterans with healthy sleep practices."
@@ -48,7 +48,7 @@
     },
     "5": {
       "employer": "ResQue, LLC",
-      "dates": "2015-12 &#8212; 2016-04",
+      "dates": "2015-12 - 2016-04",
       "title": "Web Developer",
       "highlights": {
         "0": "Used JavaScript, Node.js, Meteor.js, jQuery, MongoDB, and Bootstrap CSS to create responsive application that enabled real estate agents to dramatically improve social media engagement."

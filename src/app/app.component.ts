@@ -16,6 +16,7 @@ import { Chart, registerables } from 'chart.js';
 import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
 import { PortfolioDataService } from './services/portfolio-data.service';
 import { from, of, pipe } from 'rxjs';
+import { JobEntry } from './models/job-entry.model';
 
 @Component({
   selector: 'app-root',
@@ -24,13 +25,12 @@ import { from, of, pipe } from 'rxjs';
 })
 
 export class AppComponent {
-
   result: any;
   resume: any;
-  skills: any;
+  jobEntries: JobEntry[] = []; // create object to hold each job entry
+  skills: any = [];
   chart: any = [];
 
-  title = 'Portfolio';
   menuItems = {
     'Resume':'description',
     'Blog':'edit',
@@ -105,10 +105,36 @@ export class AppComponent {
   retrieveData() {
     this.portfolioDataService.getData().then((res) => {
       this.result = res;
-      // this.resume = this.result.resume.map((resume: any) => )
+
+      const resume = this.result.resume;
+      const resumeLen = Object.keys(resume).length;
+
+      for (let i = 0; i < resumeLen; i++) {
+        let jobEntry = new JobEntry;
+
+        const employer = resume[i].employer;
+        jobEntry.employer = employer;
+
+        const dates = resume[i].dates;
+        jobEntry.dates = dates;
+
+        const title = resume[i].title;
+        jobEntry.title = title
+
+        const highlights = resume[i].highlights;
+        const highlightsLen = Object.keys(highlights).length;
+
+        for (let j = 0; j < highlightsLen; j++) {
+          const highlight = highlights[j];
+          jobEntry.highlights[j] = highlight;
+        }
+
+        this.jobEntries.push(jobEntry); // add to entries
+
+        // console.log(jobEntry);
+      }
 
       this.skills = this.result.skills;
-      console.log(this.skills);
 
       const skillData = Object.values(this.skills) as number[];
       const labelData = Object.keys(this.skills) as string[];

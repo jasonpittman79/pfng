@@ -27,10 +27,13 @@ export class AppComponent {
 
   result: any;
   resume: any;
-  skills: any;
+  employers: any = [];
+  dates: any = [];
+  titles: any = [];
+  highlights: any = [];
+  skills: any = [];
   chart: any = [];
 
-  title = 'Portfolio';
   menuItems = {
     'Resume':'description',
     'Blog':'edit',
@@ -105,10 +108,32 @@ export class AppComponent {
   retrieveData() {
     this.portfolioDataService.getData().then((res) => {
       this.result = res;
-      // this.resume = this.result.resume.map((resume: any) => )
+
+      const resume = this.result.resume;
+      const resumeLen = Object.keys(resume).length;
+
+      for (let i = 0; i < resumeLen; i++) {
+        let id = i;
+
+        const employer = new Map<number, string>([[id, resume[i].employer]]);
+        this.employers[i] = employer;
+
+        const dates = new Map<number, string>([[id, resume[i].dates]]);
+        this.dates[i] = dates;
+
+        const title = new Map<number, string>([[id, resume[i].title]]);
+        this.titles[i] = title;
+
+        const highlights = resume[i].highlights;
+        const highlightsLen = Object.keys(highlights).length;
+
+        for (let j = 0; j < highlightsLen; j++) {
+          const highlight = new Map<number, string>([[id, highlights[j]]]);
+          this.highlights[j] = highlight;
+        }
+      }
 
       this.skills = this.result.skills;
-      console.log(this.skills);
 
       const skillData = Object.values(this.skills) as number[];
       const labelData = Object.keys(this.skills) as string[];

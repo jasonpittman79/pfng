@@ -1,6 +1,15 @@
 {
   "resume": {
     "0": {
+      "employer": "AT&T Cybersecurity",
+      "dates": "2022-07 - current",
+      "title": "Senior Full Stack Engineer",
+      "highlights": {
+        "0": "Created automated Python scripts to interface with cybersecurity platforms to process and output complex datasets. Those datasets are in turn ingested into Power BI dashboards, enabling analysts and threat hunters to track customer data and detect security risks more effectively.",
+        "1": "Revamped synchronous API call backend implementations to asynchronous (Python) for the Security Operations Center, greatly improving automated script efficiency."
+      }
+    },
+    "1": {
       "employer": "Integris Group, LLC",
       "dates": "2021-11 - 2022-05",
       "title": "Senior Full Stack Engineer",
@@ -9,7 +18,7 @@
         "1": "Aided with mobile development of a health and performance application using the Ionic Framework built on Angular and performed testing with emulators and mobile devices."
       }
     },
-    "1": {
+    "2": {
       "employer": "Rural Sourcing, Inc.",
       "dates": "2021-06 - 2021-10",
       "title": "Senior Front End Engineer",
@@ -17,7 +26,7 @@
         "0": "Collaborated with client UI/UX lead to modernize enterprise cloud migration software UI using React, Redux, JavaScript, jQuery, SASS, and PHP hosted on AWS EC2 instance."
       }
     },
-    "2": {
+    "3": {
       "employer": "Overlayer (Nights and Weekends)",
       "dates": "2019-10 - 2021-06",
       "title": "Full Stack Engineer",
@@ -27,7 +36,7 @@
         "2": "Wrote RESTful Python API to support processes such as image storage, retrieval, and manipulation in an efficient and fault-tolerant manner."
       }
     },
-    "3": {
+    "4": {
       "employer": "A Birthday Place",
       "dates": "2017-11 - 2021-06",
       "title": "Full Stack Engineer",
@@ -38,7 +47,7 @@
         "3": "Leveraged PostgreSQL and Redis task queue to manage performant back-end processes."
       }
     },
-    "4": {
+    "5": {
       "employer": "Blueridge IT Solutions, Inc.",
       "dates": "2016-07 - 2017-01",
       "title": "Web Developer",
@@ -46,7 +55,7 @@
         "0": "Implemented Learning Management System (LMS) for U.S. Department of Veterans Affairs with JavaScript frameworks and Bootstrap CSS, assisting veterans with healthy sleep practices."
       }
     },
-    "5": {
+    "6": {
       "employer": "ResQue, LLC",
       "dates": "2015-12 - 2016-04",
       "title": "Web Developer",
@@ -66,22 +75,22 @@
     "HTML":"7",
     "SASS/CSS":"7",
     "Building User Interfaces":"7",
-    "Python":"5",
+    "Python":"6",
     "Flask":"5",
-    "REST APIs":"5",
+    "REST APIs":"6",
     "SQL":"4",
     "PostgreSQL":"3",
     "sqlite3":"4",
     "MongoDB":"0.5",
     "DigitalOcean (Cloud)":"5",
-    "AWS":"0.5",
-    "Azure":"0.5",
+    "AWS":"1",
+    "Azure":"1",
     "CI/CD":"5",
     "Docker":"2",
     "RancherOS":"1",
-    "Linux":"7",
+    "Linux":"8",
     "Agile":"6",
-    "JIRA":"1",
-    "Confluence":"1"
+    "JIRA":"1.5",
+    "Confluence":"1.5"
   }
 }

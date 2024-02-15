@@ -2,11 +2,14 @@
   "resume": {
     "0": {
       "employer": "AT&T Cybersecurity",
-      "dates": "2022-07 - current",
+      "dates": "2022-07 - 2023-05, 2023-11 - current",
       "title": "Senior Full Stack Engineer",
       "highlights": {
-        "0": "Created automated Python scripts to interface with cybersecurity platforms to process and output complex datasets. Those datasets are in turn ingested into Power BI dashboards, enabling analysts and threat hunters to track customer data and detect security risks more effectively.",
-        "1": "Revamped synchronous API call backend implementations to asynchronous (Python) for the Security Operations Center, greatly improving automated script efficiency."
+        "0": "Created automated Python scripts to interface with cybersecurity platforms to process and output complex datasets. Datasets are in turn ingested into Power BI dashboards, enabling analysts and threat hunters to track customer data and detect security risks more effectively.",
+        "1": "Maintaining and developing new back-end (Python) features for AT&T Cybersecurity's Open Threat Exchange (OTX) and its subsystems, improving reliability and shoring up existing flaws and vulnerabilities.",
+        "2": "Utilizing AWS services such as S3, Elastic Container Registry, Elastic Container Service, EC2, SNS, SQS, Aurora, CloudWatch, OpenSearch, Lambda, and more to configure services and to provide support for developing and deploying applications.",
+        "3": "Performing UI feature updates (Angular) and back-end maintenance for AT&T Cybersecurity's Open Threat Exchange (OTX), correcting existing defects and enhancing the user experience.",
+        "4": "Building new UI feature sets (Angular) for the USM Anywhere software as a service (SaaS) security monitoring solution, enabling users to perform advanced queries for retrieving back-end data from AWS OpenSearch."
       }
     },
     "1": {
@@ -65,8 +68,8 @@
     }
   },
   "skills": {
-    "Angular":"5",
-    "TypeScript":"5",
+    "Angular":"6",
+    "TypeScript":"6",
     "JavaScript":"7",
     "Jasmine/Karma":"3",
     "Node.js":"1",
@@ -76,21 +79,21 @@
     "SASS/CSS":"7",
     "Building User Interfaces":"7",
     "Python":"6",
-    "Flask":"5",
+    "Flask":"6",
     "REST APIs":"6",
-    "SQL":"4",
+    "SQL":"5",
     "PostgreSQL":"3",
     "sqlite3":"4",
     "MongoDB":"0.5",
     "DigitalOcean (Cloud)":"5",
-    "AWS":"1",
+    "AWS":"2",
     "Azure":"1",
     "CI/CD":"5",
-    "Docker":"2",
+    "Docker":"3",
     "RancherOS":"1",
-    "Linux":"8",
+    "Linux":"9",
     "Agile":"6",
-    "JIRA":"1.5",
-    "Confluence":"1.5"
+    "JIRA":"2",
+    "Confluence":"2"
   }
 }

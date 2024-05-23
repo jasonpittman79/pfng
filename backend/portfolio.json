@@ -1,18 +1,26 @@
 {
   "resume": {
     "0": {
-      "employer": "AT&T Cybersecurity",
-      "dates": "2022-07 - 2023-05, 2023-11 - current",
-      "title": "Senior Full Stack Engineer",
+      "employer": "Freelance",
+      "dates": "2024-04 - current",
+      "title": "Lead Full Stack Engineer",
       "highlights": {
-        "0": "Created automated Python scripts to interface with cybersecurity platforms to process and output complex datasets. Datasets are in turn ingested into Power BI dashboards, enabling analysts and threat hunters to track customer data and detect security risks more effectively.",
-        "1": "Maintaining and developing new back-end (Python) features for AT&T Cybersecurity's Open Threat Exchange (OTX) and its subsystems, improving reliability and shoring up existing flaws and vulnerabilities.",
-        "2": "Utilizing AWS services such as S3, Elastic Container Registry, Elastic Container Service, EC2, SNS, SQS, Aurora, CloudWatch, OpenSearch, Lambda, and more to configure services and to provide support for developing and deploying applications.",
-        "3": "Performing UI feature updates (Angular) and back-end maintenance for AT&T Cybersecurity's Open Threat Exchange (OTX), correcting existing defects and enhancing the user experience.",
-        "4": "Building new UI feature sets (Angular) for the USM Anywhere software as a service (SaaS) security monitoring solution, enabling users to perform advanced queries for retrieving back-end data from AWS OpenSearch."
+        "0": "Developing updated version of a native Windows camera management application in C# and .NET to provide the ability to configure and control security-related IP cameras."
       }
     },
     "1": {
+      "employer": "AT&T Cybersecurity",
+      "dates": "2022-07 - 2023-05, 2023-12 - 2024-03",
+      "title": "Lead Full Stack Engineer",
+      "highlights": {
+        "0": "Created automated Python scripts to interface with cybersecurity platforms to process and output complex datasets. Datasets are in turn ingested into Power BI dashboards, enabling analysts and threat hunters to track customer data and detect security risks more effectively.",
+        "1": "Maintained and developing new back-end (Python) features for AT&T Cybersecurity's Open Threat Exchange (OTX) and its subsystems, improving reliability and shoring up existing flaws and vulnerabilities.",
+        "2": "Utilized AWS services such as S3, Elastic Container Registry, Elastic Container Service, EC2, SNS, SQS, Aurora, CloudWatch, OpenSearch, Lambda, and more to configure services and to provide support for developing and deploying applications.",
+        "3": "Performed UI feature updates (Angular) and back-end maintenance for AT&T Cybersecurity's Open Threat Exchange (OTX), correcting existing defects and enhancing the user experience.",
+        "4": "Built new UI feature sets (Angular) for the USM Anywhere software as a service (SaaS) security monitoring solution, enabling users to perform advanced queries for retrieving back-end data from AWS OpenSearch."
+      }
+    },
+    "2": {
       "employer": "Integris Group, LLC",
       "dates": "2021-11 - 2022-05",
       "title": "Senior Full Stack Engineer",
@@ -21,7 +29,7 @@
         "1": "Aided with mobile development of a health and performance application using the Ionic Framework built on Angular and performed testing with emulators and mobile devices."
       }
     },
-    "2": {
+    "3": {
       "employer": "Rural Sourcing, Inc.",
       "dates": "2021-06 - 2021-10",
       "title": "Senior Front End Engineer",
@@ -29,7 +37,7 @@
         "0": "Collaborated with client UI/UX lead to modernize enterprise cloud migration software UI using React, Redux, JavaScript, jQuery, SASS, and PHP hosted on AWS EC2 instance."
       }
     },
-    "3": {
+    "4": {
       "employer": "Overlayer (Nights and Weekends)",
       "dates": "2019-10 - 2021-06",
       "title": "Full Stack Engineer",
@@ -39,7 +47,7 @@
         "2": "Wrote RESTful Python API to support processes such as image storage, retrieval, and manipulation in an efficient and fault-tolerant manner."
       }
     },
-    "4": {
+    "5": {
       "employer": "A Birthday Place",
       "dates": "2017-11 - 2021-06",
       "title": "Full Stack Engineer",
@@ -50,7 +58,7 @@
         "3": "Leveraged PostgreSQL and Redis task queue to manage performant back-end processes."
       }
     },
-    "5": {
+    "6": {
       "employer": "Blueridge IT Solutions, Inc.",
       "dates": "2016-07 - 2017-01",
       "title": "Web Developer",
@@ -58,7 +66,7 @@
         "0": "Implemented Learning Management System (LMS) for U.S. Department of Veterans Affairs with JavaScript frameworks and Bootstrap CSS, assisting veterans with healthy sleep practices."
       }
     },
-    "6": {
+    "7": {
       "employer": "ResQue, LLC",
       "dates": "2015-12 - 2016-04",
       "title": "Web Developer",

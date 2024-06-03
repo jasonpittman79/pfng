@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 
 export class PortfolioDataService {
 
-  private API_URL = "https://api.jasonpittman.link";
+  private API_URL = "https://portfolio-json-bucket.s3.amazonaws.com/portfolio.json";
 
   constructor(private http: HttpClient) { }
 

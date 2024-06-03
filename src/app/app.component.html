@@ -27,7 +27,7 @@
 
   <!-- GitHub link -->
   <h4 class="github-link">The repository containing the code for this portfolio can be found at <a href="https://github.com/jasonpittman79/pfng"><fa-icon [icon]="faGithub"></fa-icon>GitHub</a>.</h4>
-  <h5 class="github-link">The front end consumes a serverless AWS API written in Python to populate resume and skills data.</h5>
+  <h5 class="github-link">The front end consumes an AWS S3 Bucket to populate resume and skills data.</h5>
 
   <!-- <ul>
     <li *ngFor="let entry of jobEntries">
@@ -138,7 +138,6 @@
     <!-- <div class="card subcard" *ngIf="!displayIsSmall()"> -->
     <div class="card subcard">
       <h4>Example of Chart.js in Angular</h4>
-      <h5>The chart data is being pulled from an AWS serverless backend in Python</h5>
       <canvas id="canvas" class="chart">{{ chart }}</canvas>
     </div>
 
